@@ -26,4 +26,14 @@ curl -H Host:website1.hackages.local http://192.168.0.1
 
 You can access the traefik dashboard on the port 8080.
 
-### 2) Traefik and a DB
+### 2) Replace NGINX
+
+Now you should be able to deploy the app you made on the exo 4 but with some constraint.
+
+Let's say the node0 will be your loadbalancer, meaning everything should pass via 10.1.1.2
+
+Then node1 could only hosts the webapp , node2 mongodb and finally node3 will only be storing redis.
+
+Have a look at this document from Docker:
+
+<https://success.docker.com/article/using-contraints-and-labels-to-control-the-placement-of-containers>
