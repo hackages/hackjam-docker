@@ -10,11 +10,13 @@ To play with traefik, you'll need 3 machines running docker, if you have done th
 
 If not, there is a vagrantfile in the exo4 folder.
 
-### 1) Traefik
+### 1) simple traefik example
 
 For the exercice on traefik, you'll try to deploy one docker image accross your environment and access it via an url.
 
 Since we don't have a DNS, you should use the hostfile to point on the manager or the command curl.
+
+You can use this simple http image : nginxdemos/hello
 
 hint :
 
