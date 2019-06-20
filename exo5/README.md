@@ -26,7 +26,7 @@ curl -H Host:website1.hackages.local http://192.168.0.1
 
 You can access the traefik dashboard on the port 8080.
 
-### 2) Replace NGINX
+### 2) Bonus try to replace NGINX
 
 Now you should be able to deploy the app you made on the exo 4 but with some constraint.
 

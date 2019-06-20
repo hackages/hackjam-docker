@@ -8,6 +8,8 @@ Try to create a Dockerfile by following <https://docs.docker.com/develop/develop
 
 When the application is running, you should be able to see something like this :
 
+![hello-ip](/exo2/images/hello_ip.PNG)
+
 ## 2) Push your image to your own docker hub
 
 Create an account here : <https://hub.docker.com/> and try to push your hello-ip image
