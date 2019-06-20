@@ -1,4 +1,5 @@
 # Orchestration with Docker swarm
+
 ## Docker swarm exercice
 
 For this set of exercices you'll need 3 linux virtual machines with docker installed.
@@ -11,13 +12,13 @@ Tip, don't use the virtual machine console since you'll need to keep the token i
 
 Hint, if it works , you should see the port TCP+UDP 7946, UDP 4789 and TCP 2377 open by using the command below.
 
-```
+``` bash
 sudo netstat -plunt
 ```
 
 ### 2) Play with your master node
 
-Try to change the certificate rotation period to one week. 
+Try to change the certificate rotation period to one week.
 
 Check the status and the health .
 
@@ -33,6 +34,6 @@ Promote one worker to manager.
 
 Try to create a multi-host overlay network to connect your service
 
-### 5) Deploy a stack 
+### 5) Deploy a stack
 
 Try to deploy the previous stack you have created with docker-compose
