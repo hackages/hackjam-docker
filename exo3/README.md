@@ -1,4 +1,5 @@
 # Hands on Docker compose
+
 ## Docker compose exercices
 
 ### 1) Deploy wordpress and mysql database
@@ -7,7 +8,7 @@ Based on the official docker wordpress image https://hub.docker.com/_/wordpress/
 
 Hint, those environment variables will be needed :
 
-```
+``` Dockerfile
 MYSQL_ROOT_PASSWORD: somewordpress
 MYSQL_DATABASE: wordpress
 MYSQL_USER: wordpress

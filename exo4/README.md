@@ -1,4 +1,4 @@
-# Orchestration with Docker swarm
+# Basic orchestration with Docker swarm
 
 ## Docker swarm exercice
 

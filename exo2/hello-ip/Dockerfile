@@ -1,8 +1,6 @@
 # Build image will be latest version of node
 FROM node:latest
 
-RUN echo "coucou" 
-
 # Create app directory
 WORKDIR /usr/src/app
 
@@ -16,4 +14,3 @@ EXPOSE 8088
 
 # Run the command npm start
 CMD [ "npm", "start" ]
-
