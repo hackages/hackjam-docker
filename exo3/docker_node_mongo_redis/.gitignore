@@ -1,0 +1,10 @@
+node_modules/
+.idea/
+*.env
+*.log
+
+dist/
+.vscode/
+
+junit.xml
+/src copy

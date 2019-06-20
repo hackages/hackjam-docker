@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Docker Node Redis Express</title>
+</head>
+<body>
+<div id="app">
+    <img src="https://www.docker.com/sites/default/files/vertical.png" alt="Docker logo">
+    <h1>{{ greeting }}</h1>
+    <button @click="addNewBook()">Add new book</button>
+    <button @click="refreshList()">Refresh list</button>
+    <ul>
+        <li v-if="books && books.length===0"> NO Books</li>
+        <li v-for="book of books">Title : {{book.title}} - Author: {{book.author}}</li>
+    </ul>
+</div>
+</body>
+<script src="js/vue.min.js"></script>
+<script src="js/axios.min.js"></script>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      greeting: 'Hello word',
+      counter: 1,
+      books: []
+    },
+    methods: {
+      addNewBook() {
+        axios
+          .post('/book', {
+            author: 'author - ' + this.counter,
+            title: 'Title - ' + this.counter,
+            text: 'Text'
+          })
+          .then(v => {
+            this.counter++;
+            this.refreshList();
+          })
+          .catch(err => {
+            console.log('Error::', err);
+          });
+      },
+      refreshList() {
+        axios
+          .get('/book')
+          .then(v => {
+            this.books = v.data;
+          })
+          .catch(err => {
+            console.log('Error::', err);
+          });
+      }
+    }
+  });
+</script>
+</html>

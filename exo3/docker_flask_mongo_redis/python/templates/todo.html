@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<div class="container">
+  <div class="alert alert-success">
+    <h1>Node IP :: {{ hostip }} </h1>
+  </div>
+  
+  <div class="alert alert-info">
+    <h2>Put data in MongoDB</h2>
+      <form class="form-inline" action="/new" method="POST">
+        <div class="form-group">
+          <input class="form-control" type="text" name="name" placeholder="key" autocomplete="off" required></input>
+          <input class="form-control" type="text" name="description" placeholder="desc" autocomplete="off" required></input>
+          <input class="form-control" type="submit" value="INSERT"></input>
+        </div>     
+      </form>
+  </div>
+  <div class="alert alert-info">
+    <h2>Get data from Redis or MongoDB</h2>
+      <form class="form-inline" action="/search" method="POST">
+      <input class="form-control" type="text" name="key" placeholder="key" autocomplete="off" required></input>
+      <input class="form-control" type="submit" value="FETCH DATA"></input>
+    </form>
+  </div>
+
+  <div class="alert alert-warning">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>Number of calls</h2>
+          <p>Hits on redis <span class="badge">{{ num_redis }}</span></p>
+          <p>Hits on mongo <span class="badge">{{ num_mongo }}</span></p>
+      </div>
+      <div class="col-sm-4">
+        <h2>REDIS KEY</h2>
+          {% for item in cache %}
+            <p>{{item}}</p>
+          {% endfor %}
+      </div>
+      <div class="col-sm-4">
+        <h2>MONGODB DOCUMENTS</h2>
+          {% for item in items %}
+            <p>Key: {{ item.name }} - Desc: {{ item.description }} </p>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-danger">
+    <form action="/clean" method="POST">
+      <input type="submit" value="CLEAN ALL"></input>
+    </form>
+  </div>
+</div>
