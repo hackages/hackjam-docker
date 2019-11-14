@@ -1,6 +1,7 @@
 # Let's play with the CLI
 
 ## Introduction to the Docker CLI
+https://labs.play-with-docker.com/
 
 ### 1) Start and stop containers
 
