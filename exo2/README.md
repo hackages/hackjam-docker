@@ -1,7 +1,7 @@
 # Hands on Docker image and Dockerfile
 https://labs.play-with-docker.com/
 
-## 1) Simple node application
+## 1) Simple applications
 Go through appV0 to appV5
 
 Those application are based on either python or nginx.
