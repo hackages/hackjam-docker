@@ -2,6 +2,7 @@
 
 ## Introduction to the Docker CLI
 https://labs.play-with-docker.com/
+https://portainer.readthedocs.io/en/stable/deployment.html
 
 ### 1) Start and stop containers
 
